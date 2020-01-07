@@ -178,9 +178,9 @@ def set_to_ro_below():
 
 options = OrderedDict()
 options['Reset Dimension Overrides'] = clear_overrides
-options['Bake Dimension Value'] = bake_dim_value
+#options['Bake Dimension Value'] = bake_dim_value
 options['Equal (EQ)'] = set_to_eq
-options['Zero Inch (0")'] = set_to_zero
+#options['Zero Inch (0")'] = set_to_zero
 options['Class B Lap Splice'] = set_to_classb_lapsplice
 options['Tension Development Length'] = set_to_tension_dev_length
 options['Prefix: Plus/Minus'] = add_plusminus_prefix
