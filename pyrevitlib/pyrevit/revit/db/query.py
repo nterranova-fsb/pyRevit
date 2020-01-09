@@ -1220,13 +1220,16 @@ def get_line_styles(doc=None):
 
 def get_history(target_element):
     doc = target_element.Document
+    wti = DB.WorksharingUtils.GetWorksharingTooltipInfo(doc,
+                                                        target_element.Id)
     if doc.IsWorkshared:
-        wti = DB.WorksharingUtils.GetWorksharingTooltipInfo(doc,
-                                                            target_element.Id)
         return ElementHistory(creator=wti.Creator,
                               owner=wti.Owner,
                               last_changed_by=wti.LastChangedBy)
-
+    else:
+        return ElementHistory(creator=wti.Creator,
+                              owner=wti.Owner,
+                              last_changed_by='N/A')
 
 def is_detail_curve(element):
     return isinstance(element, DETAIL_CURVES)
